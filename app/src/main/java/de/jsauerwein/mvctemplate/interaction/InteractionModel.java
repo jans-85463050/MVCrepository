@@ -74,12 +74,13 @@ public class InteractionModel extends Fragment {
                         .setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit)
                         .hide(actualFragment)
                         .show(nextFragment)
+                        .addToBackStack(null)
                         .commit();
             } else {
                 this.getFragmentManager()
                         .beginTransaction()
                         .setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit)
-                        .show(actualFragment)
+                        .show(nextFragment)
                         .commit();
             }
 

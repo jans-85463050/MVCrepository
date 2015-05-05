@@ -33,6 +33,7 @@ public class DrawerActivity extends FragmentActivity implements AdapterView.OnIt
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        this.drawerLayout.closeDrawers();
         DrawerAdapter.ViewHolder viewHolder = (DrawerAdapter.ViewHolder)view.getTag();
         String viewId = viewHolder.id;
         Intent switchActivity = null;

@@ -47,4 +47,9 @@ public class DarkBlueFragment extends Fragment implements View.OnClickListener {
 
         LocalBroadcastManager.getInstance(this.getActivity()).sendBroadcast(interaction);
     }
+
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+    }
 }
